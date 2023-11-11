@@ -1,0 +1,6 @@
+ARCH_SRC=$(shell find . -name '*.c') \
+				 $(shell find . -name '*.s')
+ARCH_OBJ=$(ARCH_SRC:%=$(BUILD_DIR)/%.o)
+
+ARCH_CFLAGS=$(CFLAGS)
+ARCH_ASMFLAGS=$(ASMFLAGS)

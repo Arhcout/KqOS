@@ -1,0 +1,8 @@
+ARCH_DIR=arch/$(TARGET)
+KERNEL_DIR=kernel
+LIBC_DIR=libc
+HDR=-I$(ARCH_DIR)/include -I$(KERNEL_DIR)/include -I$(LIBC_DIR)/include
+
+export CFLAGS:=$(CFLAGS) $(HDR)
+
+OBJ=$(BUILD_DIR)/$(ARCH_DIR)/Boot.s.o $(wildcard, $(BUILD_DIR)/$(KERNEL_DIR)/*.o)

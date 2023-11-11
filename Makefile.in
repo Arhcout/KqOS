@@ -1,0 +1,22 @@
+TARGET?=x86_64-elf
+OS_NAME=KqOS
+
+CC=$(TARGET)-gcc -c
+LD=$(TARGET)-gcc
+AR=$(TARGET)-ar
+GDB=gdb
+
+SRC_DIR=src
+BUILD_DIR=${CURDIR}/build
+
+BASE_CFLAGS=-Wall -Wextra -nostdlib -nostdinc -fno-builtin -nodefaultlibs -g
+BASE_LDFLAGS=
+BASE_ASMFLAGS=
+
+CFLAGS=$(BASE_CFLAGS)
+LDFLAGS=$(BASE_LDFLAGS)
+ASMFLAGS=$(BASE_ASMFLAGS)
+
+QEMU=qemu-system-x86_64
+
+export

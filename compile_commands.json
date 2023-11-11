@@ -1,0 +1,17 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-g",
+      "-o",
+      "build/./src/main.c.o",
+      "src/main.c"
+    ],
+    "directory": "/home/me/Proj/pkmng",
+    "file": "/home/me/Proj/pkmng/src/main.c",
+    "output": "/home/me/Proj/pkmng/build/src/main.c.o"
+  }
+]
