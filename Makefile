@@ -3,7 +3,7 @@ include Makefile.in
 .PHONY: run kernel clean
 
 run: kernel
-	@$(QEMU) -kernel $(OS_NAME).kernel
+	@$(QEMU) -kernel $(BUILD_DIR)/$(OS_NAME).kernel
 
 debug: kernel
 	@$(QEMU) -kernel $(OS_NAME).kernel -s

@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include <sys/types.h>
  
 /* Hardware text mode color constants. */
 enum vga_color {
@@ -103,7 +102,5 @@ void kernel_main(void)
 	/* Newline support is left as an exercise. */
 	terminal_writestring("Hello, kernel World!\n");
 
-	char slen = (uint8_t)strlen("Hello") + 0x30;
-
-	terminal_putchar(slen);
+	for(;;);
 }

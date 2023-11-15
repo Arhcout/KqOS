@@ -1,8 +1,9 @@
-TARGET?=x86_64-elf
+TARGET?=i686-elf
 OS_NAME=KqOS
 
 CC=$(TARGET)-gcc -c
 LD=$(TARGET)-gcc
+AS=$(TARGET)-as
 AR=$(TARGET)-ar
 GDB=gdb
 
@@ -10,13 +11,22 @@ SRC_DIR=src
 BUILD_DIR=${CURDIR}/build
 
 BASE_CFLAGS=-Wall -Wextra -nostdlib -nostdinc -fno-builtin -nodefaultlibs -g
-BASE_LDFLAGS=
+BASE_LDFLAGS=-nostdlib
 BASE_ASMFLAGS=
 
 CFLAGS=$(BASE_CFLAGS)
 LDFLAGS=$(BASE_LDFLAGS)
 ASMFLAGS=$(BASE_ASMFLAGS)
 
-QEMU=qemu-system-x86_64
+QEMU=qemu-system-i386
+
+# ANSI Colors
+
+END_COLOR=\033[0m
+
+R=\033[0;31m
+G=\033[0;32m
+Y=\033[1;32m
+B=\033[0;34m
 
 export

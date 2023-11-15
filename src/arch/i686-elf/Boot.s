@@ -16,6 +16,8 @@ stack_bottom:
 .skip 16384 # 16 KiB
 stack_top:
 
+.extern kernel_main
+
 .section .text
 .global _start
 .type _start, @function
