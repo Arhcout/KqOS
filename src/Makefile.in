@@ -1,11 +1,6 @@
-ARCH_DIR=arch/$(TARGET)
-KERNEL_DIR=kernel
-LIBC_DIR=libc
-HDR=-I${CURDIR}/$(ARCH_DIR)/include \
-    -I${CURDIR}/$(KERNEL_DIR)/include \
-    -I${CURDIR}/$(LIBC_DIR)/include
-
-export CFLAGS:=$(CFLAGS) $(HDR)
+export ARCH_DIR=${CURDIR}/arch/$(TARGET)
+export KERNEL_DIR=${CURDIR}/kernel
+export LIBC_DIR=${CURDIR}/libc
 
 OBJ=$(BUILD_DIR)/arch/$(TARGET)/Boot.s.o `find $(BUILD_DIR)/kernel -name '*.c.o'`
 

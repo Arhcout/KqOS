@@ -1,17 +1,80 @@
 [
   {
     "arguments": [
-      "/usr/bin/gcc",
+      "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-Wall",
       "-Wextra",
+      "-nostdinc",
+      "-fno-builtin",
       "-g",
+      "-Iinclude",
+      "-I/home/me/Proj/KqOS/src/kernel/include",
+      "-D__LIBK",
       "-o",
-      "build/./src/main.c.o",
-      "src/main.c"
+      "/home/me/Proj/KqOS/build/./string/strlen.c.libk.o",
+      "string/strlen.c"
     ],
-    "directory": "/home/me/Proj/pkmng",
-    "file": "/home/me/Proj/pkmng/src/main.c",
-    "output": "/home/me/Proj/pkmng/build/src/main.c.o"
+    "directory": "/home/me/Proj/KqOS/src/libc",
+    "file": "/home/me/Proj/KqOS/src/libc/string/strlen.c",
+    "output": "/home/me/Proj/KqOS/build/string/strlen.c.libk.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-nostdinc",
+      "-fno-builtin",
+      "-g",
+      "-Iinclude",
+      "-I/home/me/Proj/KqOS/src/kernel/include",
+      "-D__LIBC",
+      "-o",
+      "/home/me/Proj/KqOS/build/./string/strlen.c.libc.o",
+      "string/strlen.c"
+    ],
+    "directory": "/home/me/Proj/KqOS/src/libc",
+    "file": "/home/me/Proj/KqOS/src/libc/string/strlen.c",
+    "output": "/home/me/Proj/KqOS/build/string/strlen.c.libc.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-nostdinc",
+      "-fno-builtin",
+      "-g",
+      "-Iinclude",
+      "-I/home/me/Proj/KqOS/src/libc/include",
+      "-o",
+      "/home/me/Proj/KqOS/build/kernel/./arch/i686-elf/tty.c.o",
+      "arch/i686-elf/tty.c"
+    ],
+    "directory": "/home/me/Proj/KqOS/src/kernel",
+    "file": "/home/me/Proj/KqOS/src/kernel/arch/i686-elf/tty.c",
+    "output": "/home/me/Proj/KqOS/build/kernel/arch/i686-elf/tty.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-nostdinc",
+      "-fno-builtin",
+      "-g",
+      "-Iinclude",
+      "-I/home/me/Proj/KqOS/src/libc/include",
+      "-o",
+      "/home/me/Proj/KqOS/build/kernel/./Kernel.c.o",
+      "Kernel.c"
+    ],
+    "directory": "/home/me/Proj/KqOS/src/kernel",
+    "file": "/home/me/Proj/KqOS/src/kernel/Kernel.c",
+    "output": "/home/me/Proj/KqOS/build/kernel/Kernel.c.o"
   }
 ]
