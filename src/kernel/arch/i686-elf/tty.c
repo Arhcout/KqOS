@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <tty.h>
 #include <string.h>
 #include "vga.h"

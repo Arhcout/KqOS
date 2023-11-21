@@ -2,5 +2,11 @@ export ARCH_DIR=${CURDIR}/arch/$(TARGET)
 export KERNEL_DIR=${CURDIR}/kernel
 export LIBC_DIR=${CURDIR}/libc
 
-OBJ=$(BUILD_DIR)/arch/$(TARGET)/Boot.s.o `find $(BUILD_DIR)/kernel -name '*.c.o'`
+CRTI_OBJ=$(BUILD_DIR)/arch/$(TARGET)/crti.s.o
+CRTBEGIN_OBJ=$(shell $(CC) $(CFLAGS) -print-file-name=crtbegin.o)
+CRTEND_OBJ=$(shell $(CC) $(CFLAGS) -print-file-name=crtend.o)
+CRTI_OBJ=$(BUILD_DIR)/arch/$(TARGET)/crtn.s.o
+
+
+OBJ=$(CRTI_OBJ) $(CRTBEGIN_OBJ) $(BUILD_DIR)/arch/$(TARGET)/Boot.s.o `find $(BUILD_DIR)/kernel -name '*.c.o'` $(CRTEND_OBJ) $(CRTN_OBJ)
 
